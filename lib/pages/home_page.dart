@@ -37,6 +37,15 @@ class _HomePageState extends State<HomePage> {
                 },
                 title: Text("Uzcard"),
               ),
+              RadioListTile(
+                value: "humo",
+                groupValue: selectedPayment,
+                onChanged: (value) {
+                  selectedPayment = value;
+                  setState(() {});
+                },
+                title: Text("Humo"),
+              ),
             ],
           ),
         ),
