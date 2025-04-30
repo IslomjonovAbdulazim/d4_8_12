@@ -8,6 +8,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String? selectedPayment;
+  String? selectedGender;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +18,26 @@ class _HomePageState extends State<HomePage> {
         child: Padding(
           padding: EdgeInsets.all(20),
           child: Column(
-            children: [],
+            children: [
+              RadioListTile<String>(
+                value: "cash",
+                groupValue: selectedPayment,
+                onChanged: (value) {
+                  selectedPayment = value;
+                  setState(() {});
+                },
+                title: Text("Cash"),
+              ),
+              RadioListTile(
+                value: "uzcard",
+                groupValue: selectedPayment,
+                onChanged: (value) {
+                  selectedPayment = value;
+                  setState(() {});
+                },
+                title: Text("Uzcard"),
+              ),
+            ],
           ),
         ),
       ),
