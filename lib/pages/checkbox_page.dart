@@ -10,6 +10,26 @@ class CheckboxPage extends StatefulWidget {
 class _CheckboxPageState extends State<CheckboxPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: [],
+          ),
+        ),
+      ),
+    );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
